@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+
+    <title>{{header.title}}</title>
+    <meta content='{{header.description}}' name='description' />
+    <meta content='{{header.author.name}}' name='author' />
+    <meta content='index,follow' name='robots'>
+
+    <meta content="{{header.og.title}}" property="og:title">
+    <meta content="{{header.og.description}}" property="og:description">
+    <meta content="{{header.og.url}}" property="og:url">
+    <meta content="{{header.og.logo}}" property="og:image">
+    <meta content="{{header.og.type}}" property="og:type">
+
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+        rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="/css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+
+    {{>navigation}}
+    {{>masthead}}
+    {{>services}}
+    {{>contact}}
+    {{>footer}}
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
