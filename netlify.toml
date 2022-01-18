@@ -2,8 +2,5 @@
   publish = "dist/"
   command = "npm run build"
 
-[functions]
-  directory = "functions/"
-
 [dev]
   command = "npm run start"
