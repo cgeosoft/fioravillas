@@ -1,19 +1,21 @@
-$primary:#937666;
+// 
+// Styles
+// 
 
 // Import custom variables and override default Bootstrap variables
-@import "../../node_modules/startbootstrap-creative/src/scss/variables.scss";
+@import "./variables.scss";
 
 // Import Bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 // Import custom styles
-@import "../../node_modules/startbootstrap-creative/src/scss/global.scss";
+@import "./global.scss";
 
 // Components
-@import "../../node_modules/startbootstrap-creative/src/scss/components/buttons.scss";
-@import "../../node_modules/startbootstrap-creative/src/scss/components/dividers.scss";
-@import "../../node_modules/startbootstrap-creative/src/scss/components/navbar.scss";
+@import "./components/buttons.scss";
+@import "./components/dividers.scss";
+@import "./components/navbar.scss";
 
 // Sections
-@import "../../node_modules/startbootstrap-creative/src/scss/sections/masthead.scss";
-@import "../../node_modules/startbootstrap-creative/src/scss/sections/portfolio.scss";
+@import "./sections/masthead.scss";
+@import "./sections/portfolio.scss";

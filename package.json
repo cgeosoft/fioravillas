@@ -1,41 +1,36 @@
 {
-  "name": "@cgeosoft/fioravillas",
-  "version": "0.0.0",
-  "description": "fioravillas.gr",
-  "author": {
-    "name": "Christos Georgiou",
-    "email": "christos@cgeosoft.com",
-    "url": "http://cgeosoft.com"
-  },
+  "name": "fioravillas",
   "private": true,
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.html",
   "scripts": {
-    "start": "run-p build:watch serve",
-    "serve": "http-server ./dist",
-    "build": "node build.js",
-    "build:watch": "nodemon"
+    "watch:sass": "sass  --no-source-map --watch src/scss:dist/css",
+    "watch:eleventy": "eleventy --serve",
+    "build:sass": "sass  --no-source-map src/scss:dist/css",
+    "build:eleventy": "eleventy",
+    "postbuild": "postcss dist/css/*.css -u autoprefixer cssnano -r --no-map",
+    "start": "npm-run-all build:sass --parallel watch:*",
+    "build": "npm-run-all build:sass build:eleventy"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrgeor/cgipag"
+  },
+  "author": "5t3ph",
+  "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.0.1",
-    "dateformat": "^4.5.1",
-    "handlebars-helpers": "^0.10.0",
-    "http-server": "^0.12.3",
-    "jstransformer-handlebars": "^1.1.0",
-    "metalsmith": "^2.3.0",
-    "metalsmith-build-info": "^1.0.1",
-    "metalsmith-collections": "^0.9.0",
-    "metalsmith-data-loader": "^1.1.5",
-    "metalsmith-discover-helpers": "^0.1.1",
-    "metalsmith-discover-partials": "^0.1.2",
-    "metalsmith-layouts": "^2.3.1",
-    "metalsmith-markdown": "^1.3.0",
-    "metalsmith-metadata": "^0.0.4",
-    "metalsmith-move-up": "^2.0.1",
-    "metalsmith-permalinks": "^2.2.0",
-    "metalsmith-register-helpers": "^0.4.1",
-    "metalsmith-sass": "^1.7.0",
-    "metalsmith-static": "0.0.5",
-    "nodemon": "^2.0.7",
+    "@11ty/eleventy": "^0.12.1",
+    "@netlify/functions": "^0.10.0",
+    "autoprefixer": "^10.4.0",
+    "bootstrap": "^5.1.3",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.0.10",
+    "js-yaml": "^4.1.0",
     "npm-run-all": "^4.1.5",
-    "startbootstrap-creative": "^7.0.2"
+    "postcss": "^8.3.11",
+    "postcss-cli": "^9.0.2",
+    "pug": "^3.0.2",
+    "sass": "^1.43.4"
   }
 }
