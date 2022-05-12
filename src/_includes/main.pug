@@ -1,0 +1,25 @@
+doctype html
+html(lang='en')
+
+  head
+
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description' content=general.description)
+    meta(name='author' content='')
+
+    title #{general.header.title}
+
+    link(rel='icon' type='image/x-icon' href='assets/favicon.ico')
+    link(href='https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Flex:opsz,wght@8..144,400;8..144,700&display=swap' rel='stylesheet' type='text/css')
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css", rel="stylesheet", integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==", crossorigin="anonymous", referrerpolicy="no-referrer")
+    link(href='/css/styles.css' rel='stylesheet')
+
+  body#page-top
+
+    | !{content}
+
+    footer.bg-light.py-5
+      .container.px-4.px-lg-5
+        .small.text-center.text-muted
+          | Copyright &copy; 2021 - #{general.name}

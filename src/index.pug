@@ -1,76 +1,56 @@
-doctype html
-html(lang='en')
+---
+layout: main
+---
 
-  head
+header.masthead
+  .container.container-small.h-100
+    .row.gx-4.gx-lg-5.h-100.align-items-center.justify-content-center
+      .align-self-center.text-white
+        h1.mb-4.font-weight-bold.fs-pacifico #{general.name}
+        p.text-white-75.font-weight-light.mb-3
+          | Once Kefalonia becomes your destination, it will be your island destination for life. Once you visit
+          | Fiora villas and experience our warm hospitality, you will want to come back again and again.
+        div.mb-4
+          .lead.mb-2 Reservations:
+          a.btn.btn-outline-light.me-3(href="tel:+302671031532") +30 2671031532
+          a.btn.btn-outline-light.me-3(href="tel:+306947915511") +30 6947915511
+        div
+          .lead.mb-2 Social:
+          a.btn.btn-outline-light.me-3(href=general.social.facebook) Facebook #[span.fa-solid.fa-thumbs-up]
+          a.btn.btn-outline-light.me-3(href=general.social.booking) Booking #[span.badge.bg-primary 9.5/10]
+          a.btn.btn-outline-light.me-3(href=general.social.tripadvisor) Tripadvisor #[span.badge.bg-primary 5/5]
 
-    meta(charset='utf-8')
-    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
-    meta(name='description' content=general.description)
-    meta(name='author' content='')
+section#info.page-section
+  .container.container-small
+    h2.mb-4.text-center.fs-pacifico About
+    p
+      | The location is unique! Fiora villas are located in the south part of Kefalonia, just 1,5 km from
+      | Trapezaki beach, 8,5 km from kefalonian airport and 13 km from Argostoli, the capital of Kefalonia.
+    p
+      | This complex of eight elegant villas features well- appointed accommodation, with particular
+      | attention to details. Each villa is 50 sq.m, except from villa Rose ,which is 100 sq.m .The villas
+      | are built in a 5000 sq.m plot ,with parking, gardens and a sense of serenity .
+    p
+      | The villas consist of one double bedroom, two single beds in the living room, a fully equipped
+      | kitchen, a bathroom and a private veranda with sea and mountain views.
+    p
+      | The villas are an ideal choice for families, friends and couples seeking relaxation, comfort and
+      | also an enjoyable and unforgettable stay in the magnificent island of Kefalonia.
 
-    title #{general.header.title}
+section#rooms.page-section
+  h2.mb-4.text-center.fs-pacifico Rooms
+  .container.container-small
+    .row.row-cols-1.row-cols-md-2.g-4
+      each villa in villas
+        .col
+          a(href='rooms/'+villa.name)
+            img.img-fluid.img-thumbnail(src='/img/villas/' + villa.name + '/' + villa.thumb)
+            h4.text-center.fs-pacifico #{villa.title}
 
-    link(rel='icon' type='image/x-icon' href='assets/favicon.ico')
-    link(href='https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Flex:opsz,wght@8..144,400;8..144,700&display=swap' rel='stylesheet' type='text/css')
-    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css", rel="stylesheet", integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==", crossorigin="anonymous", referrerpolicy="no-referrer")
-    link(href='css/styles.css' rel='stylesheet')
+section#more.page-section.bg-primary.text-white
+  .container.container-small.text-center
+    h2.mb-4.text-center.fs-pacifico Explore More
+    .lead.mb-4 Our family business also offers bike rental at:
+    a.btn.btn-outline-light(href="https://fiorabikes.gr/" target="_blank") fiorabikes.gr
 
-  body#page-top
-
-    header.masthead
-      .container.container-small.h-100
-        .row.gx-4.gx-lg-5.h-100.align-items-center.justify-content-center
-          .align-self-center.text-white
-            h1.mb-4.font-weight-bold.fs-pacifico #{general.name}
-            p.text-white-75.font-weight-light.mb-3
-              | Once Kefalonia becomes your destination, it will be your island destination for life. Once you visit
-              | Fiora villas and experience our warm hospitality, you will want to come back again and again.
-            div.mb-4
-              .lead.mb-2 Reservations:
-              a.btn.btn-outline-light.me-3(href="tel:+302671031532") +30 2671031532
-              a.btn.btn-outline-light.me-3(href="tel:+306947915511") +30 6947915511
-            div
-              .lead.mb-2 Social:
-              a.btn.btn-outline-light.me-3(href=general.social.facebook) Facebook #[span.fa-solid.fa-thumbs-up]
-              a.btn.btn-outline-light.me-3(href=general.social.booking) Booking #[span.badge.bg-primary 9.5/10]
-              a.btn.btn-outline-light.me-3(href=general.social.tripadvisor) Tripadvisor #[span.badge.bg-primary 5/5]
-
-    section#info.page-section
-      .container.container-small
-        h2.mb-4.text-center.fs-pacifico About
-        p
-          | The location is unique! Fiora villas are located in the south part of Kefalonia, just 1,5 km from
-          | Trapezaki beach, 8,5 km from kefalonian airport and 13 km from Argostoli, the capital of Kefalonia.
-        p
-          | This complex of eight elegant villas features well- appointed accommodation, with particular
-          | attention to details. Each villa is 50 sq.m, except from villa Rose ,which is 100 sq.m .The villas
-          | are built in a 5000 sq.m plot ,with parking, gardens and a sense of serenity .
-        p
-          | The villas consist of one double bedroom, two single beds in the living room, a fully equipped
-          | kitchen, a bathroom and a private veranda with sea and mountain views.
-        p
-          | The villas are an ideal choice for families, friends and couples seeking relaxation, comfort and
-          | also an enjoyable and unforgettable stay in the magnificent island of Kefalonia.
-
-    section#rooms.page-section
-      h2.mb-4.text-center.fs-pacifico Rooms
-      .container.container-small
-        .row.row-cols-1.row-cols-md-2.g-4
-          each villa in villas
-            .col
-              a(href=villa.name)
-                img.img-fluid.img-thumbnail(src='/img/villas/' + villa.name + '/' + villa.thumb)
-                h4.text-center.fs-pacifico #{villa.title}
-
-    section#more.page-section.bg-primary.text-white
-      .container.container-small.text-center
-        h2.mb-4.text-center.fs-pacifico Explore More
-        .lead.mb-4 Our family business also offers bike rental at:
-        a.btn.btn-outline-light(href="https://fiorabikes.gr/" target="_blank") fiorabikes.gr
-
-    iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5279.062370359971!2d20.604536160958446!3d38.11811470253923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13676204c8e1ce73%3A0xa92b1072646a3a1!2sTrapezaki+beach!5e0!3m2!1sen!2sgr!4v1526130272209' width='100%' height='450' frameborder='0' style='border:0' allowfullscreen='')
-
-    footer.bg-light.py-5
-      .container.px-4.px-lg-5
-        .small.text-center.text-muted
-          | Copyright &copy; 2021 - #{general.name}
+iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5279.062370359971!2d20.604536160958446!3d38.11811470253923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13676204c8e1ce73%3A0xa92b1072646a3a1!2sTrapezaki+beach!5e0!3m2!1sen!2sgr!4v1526130272209' width='100%' height='450' frameborder='0' style='border:0' allowfullscreen='')
