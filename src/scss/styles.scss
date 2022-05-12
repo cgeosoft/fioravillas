@@ -32,6 +32,17 @@ body {
   font-family: "Pacifico", cursive;
 }
 
+header {
+  &.masthead {
+    background: linear-gradient(to bottom, #{fade-out($brown, 0.2)} 0%, #{fade-out($brown, 0.2)} 100%),
+      url("/img/masthead.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+}
+
 #rooms {
   .container {
     position: relative;
