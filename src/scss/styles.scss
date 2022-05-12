@@ -1,21 +1,51 @@
-// 
-// Styles
-// 
-
 // Import custom variables and override default Bootstrap variables
-@import "./variables.scss";
+@import "../../node_modules/startbootstrap-creative/src/scss/variables.scss";
+
+$orange: #c98657;
+$brown: #5c4d42;
+$primary: $orange;
 
 // Import Bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 // Import custom styles
-@import "./global.scss";
+@import "../../node_modules/startbootstrap-creative/src/scss/global.scss";
 
 // Components
-@import "./components/buttons.scss";
-@import "./components/dividers.scss";
-@import "./components/navbar.scss";
+@import "../../node_modules/startbootstrap-creative/src/scss/components/buttons.scss";
+@import "../../node_modules/startbootstrap-creative/src/scss/components/dividers.scss";
+@import "../../node_modules/startbootstrap-creative/src/scss/components/navbar.scss";
 
 // Sections
-@import "./sections/masthead.scss";
-@import "./sections/portfolio.scss";
+@import "../../node_modules/startbootstrap-creative/src/scss/sections/masthead.scss";
+@import "../../node_modules/startbootstrap-creative/src/scss/sections/portfolio.scss";
+
+body {
+  font-family: "Roboto Flex", sans-serif;
+}
+
+.container-small {
+  max-width: 720px;
+}
+
+.fs-pacifico {
+  font-family: "Pacifico", cursive;
+}
+
+#rooms {
+  .container {
+    position: relative;
+    &:before {
+      content: "";
+      border: solid 5px #c9865715;
+      position: absolute;
+      width: 105%;
+      height: 105%;
+      z-index: -1;
+      top: -2%;
+      left: -2%;
+      // transform: rotate(2deg);
+      border-radius: 1rem;
+    }
+  }
+}

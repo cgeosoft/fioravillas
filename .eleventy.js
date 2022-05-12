@@ -5,7 +5,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary("pug", pug);
   eleventyConfig.addDataExtension("yml", contents => yaml.load(contents));
   eleventyConfig.addWatchTarget("./src/scss/");
-  eleventyConfig.addPassthroughCopy("./src/assets");
+  eleventyConfig.addPassthroughCopy({ "./src/static": "./" });
 
   return {
     html: true,

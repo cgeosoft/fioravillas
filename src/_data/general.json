@@ -1,0 +1,18 @@
+{
+  "name": "Fiora Villas",
+  "header": {
+    "title": "Fiora Villas - Villas set at Trapezaki Cephalonia",
+    "description": "A complex of eight elegant villas features well appointed accommodation, with particular attention to details",
+    "og": {
+      "title": "Fiora Villas - Villas set at Trapezaki Cephalonia",
+      "description": "This complex of eight elegant villas features well appointed accommodation, with particular attention to details",
+      "type": "product",
+      "image": "http://fiorabikes.gr/img/banners/01.jpg"
+    }
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/fioravillas",
+    "booking": "https://www.booking.com/hotel/gr/fiora-villas.en-gb.html",
+    "tripadvisor": "https://www.tripadvisor.com.gr/Hotel_Review-g776006-d2664620-Reviews-Fiora_Villas-Trapezaki_Kefalonia_Ionian_Islands.html"
+  }
+}
