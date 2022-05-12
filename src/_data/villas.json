@@ -1,6 +1,7 @@
 [
   {
     "name": "jasmine",
+    "title": "Jasmine",
     "thumb": "8.jpg",
     "images": [
       "1.jpg",
@@ -39,6 +40,7 @@
   },
   {
     "name": "lillium",
+    "title": "Lillium",
     "thumb": "38.jpg",
     "images": [
       "33.jpg",
@@ -73,6 +75,7 @@
   },
   {
     "name": "lotus",
+    "title": "Lotus",
     "thumb": "74.jpg",
     "images": [
       "61.jpg",
@@ -97,6 +100,7 @@
   },
   {
     "name": "violleta",
+    "title": "Violleta",
     "thumb": "89.jpg",
     "images": [
       "100.jpg",
