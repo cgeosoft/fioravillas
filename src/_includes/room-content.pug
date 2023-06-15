@@ -2,9 +2,9 @@ mixin room-content(room)
   h2.mb-4.text-center.fs-pacifico #{room.title}
   .row
     .col-lg-6
-      each photo in room.photos[0]
+      each photo in room.photos.filter((photo, index) => index % 2 === 0)
         img.w-100.shadow-1-strong.rounded.mb-4(src='/img/villas/'+room.name+'/' + photo)
     .col-lg-6
-      each photo in room.photos[1]
+      each photo in room.photos.filter((photo, index) => index % 2 === 1)
         img.w-100.shadow-1-strong.rounded.mb-4(src='/img/villas/'+room.name+'/' + photo)
 
