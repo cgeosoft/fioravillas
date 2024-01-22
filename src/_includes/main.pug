@@ -10,6 +10,12 @@ html(lang='en')
 
     title #{general.header.title}
 
+    //- og tags
+    meta(property='og:title' content=general.header.og.title)
+    meta(property='og:description' content=general.header.og.description)
+    meta(property='og:image' content=general.header.og.image)
+    meta(property='og:type' content=general.header.og.type)
+
     link(rel='icon' type='image/x-icon' href='assets/favicon.ico')
     link(href='https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Flex:opsz,wght@8..144,400;8..144,700&display=swap' rel='stylesheet' type='text/css')
     link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css", rel="stylesheet", integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==", crossorigin="anonymous", referrerpolicy="no-referrer")
