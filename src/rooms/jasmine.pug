@@ -1,7 +1,11 @@
 ---
 layout: room
+villa: 0
 ---
 
-include ../_includes/room-content
+- const room = villas[villa].name
+- const photos = villas[villa].photos
 
-+room-content(villas[0])
+h2(class='mb-4 text-center fs-pacifico') #{villas[villa].title}
+
+include ../_includes/gallery
