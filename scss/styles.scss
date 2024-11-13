@@ -1,0 +1,62 @@
+// Import custom variables and override default Bootstrap variables
+@import "../node_modules/startbootstrap-creative/src/scss/variables.scss";
+
+$orange: #c98657;
+$brown: #5c4d42;
+$primary: $orange;
+
+// Import Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+// Import custom styles
+@import "../node_modules/startbootstrap-creative/src/scss/global.scss";
+
+// Components
+@import "../node_modules/startbootstrap-creative/src/scss/components/buttons.scss";
+@import "../node_modules/startbootstrap-creative/src/scss/components/dividers.scss";
+@import "../node_modules/startbootstrap-creative/src/scss/components/navbar.scss";
+
+// Sections
+@import "../node_modules/startbootstrap-creative/src/scss/sections/masthead.scss";
+@import "../node_modules/startbootstrap-creative/src/scss/sections/portfolio.scss";
+
+body {
+  font-family: "Roboto Flex", sans-serif;
+}
+
+.container-small {
+  max-width: 720px;
+}
+
+.fs-pacifico {
+  font-family: "Pacifico", cursive !important;
+}
+
+header {
+  &.masthead {
+    background: linear-gradient(to bottom, #{fade-out($brown, 0.2)} 0%, #{fade-out($brown, 0.2)} 100%),
+      url("/img/masthead.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+}
+
+#rooms {
+  .container {
+    position: relative;
+    &:before {
+      content: "";
+      border: solid 5px #c9865715;
+      position: absolute;
+      width: 105%;
+      height: 105%;
+      z-index: -1;
+      top: -2%;
+      left: -2%;
+      // transform: rotate(2deg);
+      border-radius: 1rem;
+    }
+  }
+}

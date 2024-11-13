@@ -1,11 +1,10 @@
 ---
 layout: room
-villa: 0
+name: jasmine
 ---
 
-- const room = villas[villa].name
-- const photos = villas[villa].photos
+- const villa = villas.find(v => v.name === name)
 
-h2(class='mb-4 text-center fs-pacifico') #{villas[villa].title}
+h2(class='mb-4 text-center fs-pacifico') #{villa.title}
 
 include ../_includes/gallery

@@ -1,7 +1,7 @@
 div(class='gallery')
-  each photo in photos
-    a(href=`/img/villas/${room}/${photo}` data-lightbox=`${room}` data-title=`${room}`)
-      img(src=`/img/villas/${room}/${photo}` class='rounded shadow border w-100')
+  each photo in villa.photos
+    a(href=`/img/villas/${villa.name}/${photo}` data-lightbox=`${villa.name}` data-title=`${villa.name}`)
+      img(src=`/img/villas/${villa.name}/thumbs/${photo}` class='rounded shadow border w-100')
 
 script(src="https://cdn.jsdelivr.net/npm/macy@2")
 

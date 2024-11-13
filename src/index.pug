@@ -39,8 +39,12 @@ section#info.page-section
 section#rooms.page-section
   h2.mb-4.text-center.fs-pacifico Rooms
   .container.container-small
+    each villa in villas.slice(0,1)
+      a(href='rooms/'+villa.name class="pb-2")
+        img.img-fluid.img-thumbnail(src='/img/villas/' + villa.name + '/' + villa.thumb)
+        h4.text-center.fs-pacifico #{villa.title}
     .row.row-cols-1.row-cols-md-2.g-4
-      each villa in villas
+      each villa in villas.slice(1)
         .col
           a(href='rooms/'+villa.name)
             img.img-fluid.img-thumbnail(src='/img/villas/' + villa.name + '/' + villa.thumb)
