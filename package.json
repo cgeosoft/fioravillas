@@ -11,7 +11,8 @@
     "build:sass": "sass  --no-source-map scss:dist/css",
     "build:eleventy": "eleventy",
     "start": "npm-run-all build:sass --parallel watch:*",
-    "build": "npm-run-all build:sass build:eleventy"
+    "build": "npm-run-all build:sass build:eleventy",
+    "deploy": "npm run build && netlify deploy --prod"
   },
   "repository": "https://github.com/cgeosoft/fioravillas",
   "dependencies": {
